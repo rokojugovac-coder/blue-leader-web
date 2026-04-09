@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tražilica — Blue Leader</title>
+  <meta name="description" content="Pretražite 465 artikala — Tuscania pločice, Litokol kemija, Homedin pedestali.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .search-hero {
+      background: var(--navy);
+      padding: 56px 0 48px;
+      text-align: center;
+    }
+    .search-hero h1 { color: white; font-size: 32px; margin-bottom: 8px; }
+    .search-hero p  { color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 28px; }
+
+    .search-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+    }
+    .search-wrap input {
+      width: 100%;
+      padding: 16px 56px 16px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      box-sizing: border-box;
+    }
+    .search-wrap .search-icon {
+      position: absolute;
+      right: 36px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--grey);
+      font-size: 18px;
+      pointer-events: none;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 24px 0 0;
+      justify-content: center;
+    }
+    .filter-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      transition: all 0.15s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: white;
+      color: var(--navy);
+      border-color: white;
+    }
+
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 16px;
+      font-size: 13px;
+      color: var(--grey);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .results-bar strong { color: var(--navy); }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .result-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.15s, border-color 0.15s;
+    }
+    .result-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #cbd5e1; }
+
+    .rc-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .rc-cat {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .cat-Pločice            { background:#e8f0fb; color:#1B3066; }
+    .cat-Ljepila            { background:#fef9c3; color:#78350f; }
+    .cat-Fuge               { background:#f0fdf4; color:#166534; }
+    .cat-Epoxy              { background:#fdf4ff; color:#6b21a8; }
+    .cat-Hidroizolacija     { background:#eff6ff; color:#1e40af; }
+    .cat-Grundovi           { background:#fff7ed; color:#9a3412; }
+    .cat-Silikoni           { background:#f8fafc; color:#334155; }
+    .cat-Estrihi            { background:#fef3c7; color:#92400e; }
+    .cat-Čišćenje           { background:#ecfdf5; color:#065f46; }
+    .cat-Alat               { background:#f1f5f9; color:#475569; }
+    .cat-Pedestali          { background:#ecfdf5; color:#065f46; }
+
+    .rc-sku { font-size: 10px; color: var(--grey); font-family: monospace; }
+    .rc-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .rc-desc { font-size: 12px; color: #64748b; line-height: 1.5; margin-bottom: 12px; flex: 1; }
+
+    .rc-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .rc-tag {
+      font-size: 11px;
+      background: var(--light);
+      color: var(--navy);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .rc-color-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 1px solid rgba(0,0,0,0.1);
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    .rc-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-wa {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px;
+      background: #25d366;
+      color: white;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-wa:hover { background: #1ebe5c; }
+    .btn-wa svg { width: 16px; height: 16px; fill: white; flex-shrink: 0; }
+
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--grey);
+    }
+    .no-results h3 { font-size: 20px; color: var(--navy); margin-bottom: 8px; }
+    .no-results .wa-suggest {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #25d366;
+      color: white;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .suggestions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      justify-content: center;
+    }
+    .suggestion-chip {
+      padding: 6px 14px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 12px;
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .suggestion-chip:hover { background: #e2e8f0; }
+
+    @media (max-width: 600px) {
+      .results-grid { grid-template-columns: 1fr; }
+      .search-hero h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><span>Blue</span> Leader</a>
+  <ul>
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="usluge.html">Materijali</a></li>
+    <li><a href="trazilica.html" class="active">Tražilica</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<div class="search-hero">
+  <h1>Pronađite pravi materijal</h1>
+  <p>465 artikala — upišite naziv, dimenziju, kategoriju ili opis</p>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="npr. 61x61 outdoor, starlike bijela, hidroizolacija kupaona..." autocomplete="off" autofocus>
+    <span class="search-icon">🔍</span>
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-cat="">Sve</button>
+    <button class="filter-btn" data-cat="Pločice">Pločice</button>
+    <button class="filter-btn" data-cat="Ljepila za pločice">Ljepila</button>
+    <button class="filter-btn" data-cat="Fuge">Fuge</button>
+    <button class="filter-btn" data-cat="Epoxy fuge i ljepila">Epoxy</button>
+    <button class="filter-btn" data-cat="Hidroizolacija">Hidroizolacija</button>
+    <button class="filter-btn" data-cat="Silikoni i kitovi">Silikoni</button>
+    <button class="filter-btn" data-cat="Pedestali">Pedestali</button>
+    <button class="filter-btn" data-cat="Alat i pribor">Alat</button>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="results-bar">
+      <span id="resultsCount"><strong>465</strong> artikala</span>
+      <span id="searchHint" style="font-size:12px;color:var(--grey)">Počnite tipkati za pretragu</span>
+    </div>
+    <div class="results-grid" id="resultsGrid"></div>
+    <div class="no-results" id="noResults" style="display:none">
+      <h3>Nismo pronašli točan artikal</h3>
+      <p>Ne brinite — naš prodajni savjetnik Luka zna naš cijeli asortiman i pomoći će vam pronaći pravo rješenje.</p>
+      <a class="wa-suggest" id="waNoResult" href="#">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.849L.057 23.882l6.198-1.448A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.399l-.371-.22-3.679.859.875-3.595-.242-.371A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Pitajte Luku na WhatsAppu
+      </a>
+      <div class="suggestions" id="suggestionChips"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner" style="margin-top:40px">
+  <div class="container" style="text-align:center">
+    <h2>Trebate stručni savjet?</h2>
+    <p>Luka vam može preporučiti pravi materijal za vaš projekt — besplatno i odmah.</p>
+    <a id="waBottomCta" href="#" class="btn">
+      Pišite nam na WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Blue Leader d.o.o.</strong> — Veleprodaja građevinskog materijala &nbsp;|&nbsp;
+    <a href="mailto:info@blue-leader.hr" style="color:rgba(255,255,255,0.6)">info@blue-leader.hr</a></p>
+  <p style="margin-top:8px">© 2025 Blue Leader d.o.o. Sva prava pridržana.</p>
+</footer>
+
+<!-- Fuse.js fuzzy search -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+<script>
+// ─── CONFIG ────────────────────────────────────────────────────────────────
+const WA_NUMBER = '385XXXXXXXXX'; // ZAMIJENI s pravim brojem kad aktiviraš Twilio
+
+// ─── COLOR MAP ─────────────────────────────────────────────────────────────
+const COLOR_MAP = {
+  '00 Crystal':'#dff0f7','02 Sabbia Bianca':'#f0e8d8','04 Pomice di Lipari':'#c8c0b0',
+  '06 Nebbia':'#b8bcc4','07 Cenere':'#a0a4a8','08 Terra di Bruma':'#8a8478',
+  '10 Ardesia':'#6b7280','12 Nero Antico':'#2d2926','13 Argilla Bianca':'#d4ccc0',
+  '20 Limo del Nilo':'#8a7d5a','21 Calce di Marrakech':'#d4b896','22 Terra di Volterra':'#9a7850',
+  '24 Argilla Bruciata':'#8b4513','26 White di Spagna':'#f5f0e8','27 Caolino':'#ede8e0',
+  '28 Dune':'#c8b090','29 Terra di Borgogna':'#7a3030','30 Argilla di Cipro':'#a06040',
+  '31 Terra Fumicata':'#706050','34 Terracotta':'#c0632c','35 Arenaria':'#c8a870',
+  '100 Bianco Assoluto':'#f8f8f8','102 Bianco Ghiaccio':'#f0f4f8','105 Bianco Titanio':'#f0f0f0',
+  '110 Grigio Perla':'#d4d0cc','115 Grigio Seta':'#c8c4c0','120 Grigio Piombo':'#888888',
+  '125 Grigio Cemento':'#9a9890','130 Grigio Ardesia':'#708090',
+  '140 Nero Grafite':'#3a3a3a','145 Nero Carbonio':'#282828',
+  '200 Avorio':'#e8dcc8','202 Naturale':'#c8b898','205 Travertino':'#d4c8a8',
+  '208 Sabbia':'#d4b87a','210 Greige':'#c0b09a','215 Tortora':'#b0a898',
+  '225 Tabacco':'#8b6545','230 Cacao':'#6b4020','232 Cuoio':'#7a4828','235 Caffè':'#5a3018',
+  '300 Azzurro Pastello':'#a8c8e8','310 Azzurro Polvere':'#90b0d0',
+  'Crystal':'#dff0f7','Galaxy':'#1a1a2e','Gold':'#d4a820','Night Vision':'#1a1a3a',
+  'Spotlight':'#e8e0c0','Mix':'#9090a0',
+  'White':'#f5f5f5','White 1':'#f0f0f0','White 2':'#e8e8e8',
+  'Ivory 1':'#f0e8d8','Ivory 2':'#e8dcc8','Ivory 3':'#e0d0b8',
+  'Beige 1':'#e8d8b8','Beige 2':'#d4c09a','Beige 3':'#c0a878','Beige 4':'#b09060',
+  'Grey':'#9ca3af','Grey 1':'#c0c0c0','Grey 2':'#a0a0a0','Grey 3':'#808080',
+  'Silver 1':'#d0d0d0','Silver 2':'#b8b8b8','Silver 3':'#a0a0a0',
+  'Black 1':'#3a3a3a','Black 2':'#282828',
+  'Brown 1':'#8b6045','Brown 2':'#6b4030','Brown 3':'#5a3020',
+  'Bijela':'#f5f5f5','Ultra bijela':'#ffffff','Bjelokost':'#e8dcc8',
+  'Siva':'#9ca3af','Bež':'#d4b896','Smeđa':'#92400e',
+};
+
+// ─── CATEGORY CSS CLASS ─────────────────────────────────────────────────────
+function catClass(cat) {
+  if (cat.includes('Pločice'))    return 'cat-Pločice';
+  if (cat.includes('Ljepila'))    return 'cat-Ljepila';
+  if (cat.includes('Epoxy'))      return 'cat-Epoxy';
+  if (cat.includes('Fuge'))       return 'cat-Fuge';
+  if (cat.includes('Hidroizo'))   return 'cat-Hidroizolacija';
+  if (cat.includes('Grundovi'))   return 'cat-Grundovi';
+  if (cat.includes('Silikoni'))   return 'cat-Silikoni';
+  if (cat.includes('Estrihi'))    return 'cat-Estrihi';
+  if (cat.includes('Čišćenje'))   return 'cat-Čišćenje';
+  if (cat.includes('Pedestali'))  return 'cat-Pedestali';
+  return 'cat-Alat';
+}
+
+// ─── DIMENSION NORMALIZER ──────────────────────────────────────────────────
+// Pretvara "60x60" → "61X61", "30x60" → "30.4X61" itd.
+function normalizeDimQuery(q) {
+  const m = q.match(/(\d+)\s*[xX×]\s*(\d+)/);
+  if (!m) return q;
+  const [, w, h] = m;
+  // Tuscania nazivi imaju dim poput "61X61", "30.4X61" — rade fuzzy search dalje
+  return q.replace(/(\d+)\s*[xX×]\s*(\d+)/, `${w}X${h}`);
+}
+
+// ─── WA LINK ───────────────────────────────────────────────────────────────
+function waLink(text) {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
+// ─── RENDER CARD ──────────────────────────────────────────────────────────
+function renderCard(p) {
+  const colorHex = COLOR_MAP[p.col] || '#9ca3af';
+  const colorDot = p.col
+    ? `<span class="rc-color-dot" style="background:${colorHex}"></span>${p.col}`
+    : '';
+  const tags = [
+    p.pkg ? `<span class="rc-tag">${p.pkg}</span>` : '',
+    p.u  ? `<span class="rc-tag">${p.u}</span>` : '',
+    colorDot ? `<span class="rc-tag">${colorDot}</span>` : '',
+  ].filter(Boolean).join('');
+
+  const msgText = `Zanima me ${p.n} (${p.s}) — možete li mi dati ponudu?`;
+
+  return `
+    <div class="result-card">
+      <div class="rc-top">
+        <span class="rc-cat ${catClass(p.c)}">${p.c}</span>
+        <span class="rc-sku">${p.s}</span>
+      </div>
+      <div class="rc-name">${p.n}</div>
+      ${p.d ? `<div class="rc-desc">${p.d}</div>` : ''}
+      ${tags ? `<div class="rc-meta">${tags}</div>` : ''}
+      <div class="rc-actions">
+        <a class="btn-wa" href="${waLink(msgText)}" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.849L.057 23.882l6.198-1.448A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.652-.51-5.17-1.399l-.371-.22-3.679.859.875-3.595-.242-.371A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Pitaj za cijenu
+        </a>
+      </div>
+    </div>`;
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────
+let allProducts = [];
+let fuse;
+let activeCategory = '';
+
+const SUGGESTIONS = ['61x61 outdoor','starlike bijela','hidroizolacija','flex ljepilo','pedestal terasa','mozaik','epoxy fuga','nivelacijska masa'];
+
+fetch('products.json')
+  .then(r => r.json())
+  .then(data => {
+    allProducts = data;
+    fuse = new Fuse(data, {
+      keys: [
+        { name: 'n', weight: 0.5 },
+        { name: 'd', weight: 0.3 },
+        { name: 'c', weight: 0.1 },
+        { name: 'col', weight: 0.05 },
+        { name: 's', weight: 0.05 },
+      ],
+      threshold: 0.4,
+      includeScore: true,
+      minMatchCharLength: 2,
+    });
+    renderResults(allProducts);
+    document.getElementById('searchInput').addEventListener('input', onSearch);
+  });
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCategory = btn.dataset.cat;
+    onSearch();
+  });
+});
+
+// WA bottom CTA
+document.getElementById('waBottomCta').href = waLink('Pozdrav! Trebam pomoć pri odabiru materijala za projekt.');
+
+function onSearch() {
+  const raw = document.getElementById('searchInput').value.trim();
+  const q = normalizeDimQuery(raw);
+
+  let results;
+  if (!q) {
+    results = allProducts;
+  } else {
+    const fuseResults = fuse.search(q);
+    results = fuseResults.map(r => r.item);
+  }
+
+  if (activeCategory) {
+    results = results.filter(p => p.c === activeCategory);
+  }
+
+  const count = document.getElementById('resultsCount');
+  const hint  = document.getElementById('searchHint');
+
+  count.innerHTML = `<strong>${results.length}</strong> ${results.length === 1 ? 'artikal' : 'artikala'}`;
+  hint.textContent = q ? `za: "${raw}"` : 'Počnite tipkati za pretragu';
+
+  renderResults(results, raw);
+}
+
+function renderResults(results, query = '') {
+  const grid = document.getElementById('resultsGrid');
+  const noRes = document.getElementById('noResults');
+
+  if (results.length === 0) {
+    grid.innerHTML = '';
+    noRes.style.display = 'block';
+    const chips = SUGGESTIONS.map(s =>
+      `<span class="suggestion-chip" onclick="document.getElementById('searchInput').value='${s}';onSearch()">${s}</span>`
+    ).join('');
+    document.getElementById('suggestionChips').innerHTML = chips;
+    const q2 = query || 'materijal';
+    document.getElementById('waNoResult').href = waLink(`Tražim ${q2} — možete li mi pomoći pronaći pravi artikal?`);
+    return;
+  }
+
+  noRes.style.display = 'none';
+  // Prikaži max 60 rezultata
+  grid.innerHTML = results.slice(0, 60).map(renderCard).join('');
+}
+</script>
+</body>
+</html>
