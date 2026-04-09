@@ -3,9 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Materijali — Blue Leader</title>
-  <meta name="description" content="Asortiman Blue Leadera — ljepila za pločice, fuge, hidroizolacije, estrih, fasadni sustavi i glet mase iz direktnog uvoza iz Italije.">
+  <title>Naši materijali — Blue Leader</title>
+  <meta name="description" content="Tuscania keramika, Litokol kemija i Homedin pedestali — kompletan asortiman direktno iz Italije po veleprodajnim cijenama.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .brand-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .badge-tuscania { background: #e8f0fb; color: #1B3066; }
+    .badge-litokol  { background: #fef3c7; color: #92400e; }
+    .badge-homedin  { background: #ecfdf5; color: #065f46; }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .series-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      transition: box-shadow 0.15s;
+    }
+    .series-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .series-card .sc-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 6px;
+    }
+    .series-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .series-card p {
+      font-size: 12px;
+      color: var(--grey);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .format-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .format-tag {
+      font-size: 11px;
+      background: var(--light);
+      color: var(--navy);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .litokol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .litokol-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      transition: box-shadow 0.15s;
+    }
+    .litokol-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .litokol-card .lc-count {
+      float: right;
+      font-size: 11px;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+    .litokol-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .litokol-card p {
+      font-size: 12px;
+      color: var(--grey);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .litokol-card .lc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .litokol-card .lc-tag {
+      font-size: 10px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      color: var(--grey);
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .pedestal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .pedestal-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      transition: box-shadow 0.15s;
+    }
+    .pedestal-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .pedestal-card .pc-range {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      background: #ecfdf5;
+      color: #065f46;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .pedestal-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .pedestal-card p {
+      font-size: 12px;
+      color: var(--grey);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 32px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-item .num {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-item .lbl {
+      font-size: 12px;
+      color: var(--grey);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .series-grid, .litokol-grid, .pedestal-grid { grid-template-columns: 1fr 1fr; }
+      .stat-row { gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      .series-grid, .litokol-grid, .pedestal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,105 +193,359 @@
   <ul>
     <li><a href="index.html">Početna</a></li>
     <li><a href="usluge.html" class="active">Materijali</a></li>
+    <li><a href="cijenik.html">Cijenik</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
 </nav>
 
 <div class="page-hero">
   <h1>Naši materijali</h1>
-  <p>Direktni uvoz iz Italije — sve za završne radove na jednom mjestu</p>
+  <p>Tuscania keramika · Litokol kemija · Homedin pedestali — direktan uvoz iz Italije</p>
 </div>
 
+
+<!-- ═══════════════════════════════════════════════════════ TUSCANIA ══ -->
 <section>
   <div class="container">
+    <span class="brand-badge badge-tuscania">Tuscania · Italija</span>
+    <h2 class="section-title">Keramičke pločice — 78 artikala</h2>
+    <p class="section-sub">Talijanski gres porcelanat direktno iz tvornice Tuscania. Formati od 15×30 do 122×122 cm u rektificiranoj, poliranoj, polupoliranoj i outdoor izvedbi. Uvijek na zalihi.</p>
 
-    <div class="section-label">Kategorije</div>
-    <h2 class="section-title">Kompletan asortiman</h2>
-    <p class="section-sub">Materijali za svakodnevni rad keramičara, parketara, fasadera, gipsara i svih završnih radova.</p>
+    <div class="stat-row">
+      <div class="stat-item"><div class="num">78</div><div class="lbl">artikala</div></div>
+      <div class="stat-item"><div class="num">14</div><div class="lbl">formata</div></div>
+      <div class="stat-item"><div class="num">8</div><div class="lbl">kolekcija</div></div>
+      <div class="stat-item"><div class="num">4</div><div class="lbl">izvedbe</div></div>
+    </div>
 
-    <div class="products-grid">
+    <!-- Izvedbe -->
+    <div class="section-label" style="margin-top:40px">Izvedbe</div>
+    <div class="series-grid">
 
-      <div class="product-card">
-        <div class="category">Keramičari / Pločičari</div>
-        <h3>Ljepila za pločice</h3>
-        <p>C1, C2, C2 S1 i C2 S2 klase. Za podove, zidove, kupaone i terase. Bijela i siva boja. Pakiranje 25 kg.</p>
+      <div class="series-card">
+        <div class="sc-label">Najtraženija</div>
+        <h4>Rektificirana (RT)</h4>
+        <p>Precizno rezani rubovi, fugirni razmak 1–2 mm. Za kupaone, dnevne sobe i javne prostore.</p>
+        <div class="format-tags">
+          <span class="format-tag">15×90</span>
+          <span class="format-tag">30×61</span>
+          <span class="format-tag">61×61</span>
+          <span class="format-tag">61×122</span>
+          <span class="format-tag">80×80</span>
+          <span class="format-tag">90×90</span>
+          <span class="format-tag">122×122</span>
+        </div>
       </div>
 
-      <div class="product-card">
-        <div class="category">Keramičari / Pločičari</div>
-        <h3>Fugirne mase</h3>
-        <p>Cementne i epoksidne fuge. Cijeli spektar boja. Za spojeve od 1 do 20 mm. Vodootporne i antibakterijske.</p>
+      <div class="series-card">
+        <div class="sc-label">Efektan sjaj</div>
+        <h4>Polirana (Lappato)</h4>
+        <p>Visoki sjaj, glatka površina. Za reprezentativne unutarnje prostore i hodnike.</p>
+        <div class="format-tags">
+          <span class="format-tag">30×60</span>
+          <span class="format-tag">60×60</span>
+          <span class="format-tag">60×121</span>
+          <span class="format-tag">90×90</span>
+          <span class="format-tag">121×121</span>
+          <span class="format-tag">122×122</span>
+        </div>
       </div>
 
-      <div class="product-card">
-        <div class="category">Kupaone / Hidroizolacija</div>
-        <h3>Hidroizolacijske membrane</h3>
-        <p>Jednoslojne i dvoslojne membrane za kupaone, terase i podrume. Elastične, paropropusne.</p>
+      <div class="series-card">
+        <div class="sc-label">Srednji sjaj</div>
+        <h4>Polupolirana</h4>
+        <p>Kombinirani efekt matirane i polirane površine. Atraktivan izgled s manje vidljivih otisaka prstiju.</p>
+        <div class="format-tags">
+          <span class="format-tag">61×122</span>
+          <span class="format-tag">90×90</span>
+          <span class="format-tag">122×122</span>
+        </div>
       </div>
 
-      <div class="product-card">
-        <div class="category">Kupaone / Detalji</div>
-        <h3>Silikon i kit</h3>
-        <p>Sanitarni silikoni, neutralni i acetoksidni. Komplet bojom za kupaone. Antifungalna zaštita.</p>
+      <div class="series-card">
+        <div class="sc-label">Vanjska ugradnja</div>
+        <h4>Outdoor (anti-slip)</h4>
+        <p>Pojačana hrapavost, R10/R11 klasa protuplizkavosti. Terase, balkoni, vrtne staze, bazeni.</p>
+        <div class="format-tags">
+          <span class="format-tag">15×90</span>
+          <span class="format-tag">20×122</span>
+          <span class="format-tag">30×61</span>
+          <span class="format-tag">61×61</span>
+          <span class="format-tag">61×122</span>
+          <span class="format-tag">90×90</span>
+        </div>
       </div>
 
-      <div class="product-card">
-        <div class="category">Parketari</div>
-        <h3>Ljepilo za parket</h3>
-        <p>Reaktivna i disperzijska ljepila za masivni i lamelni parket. Elastična, bez otapala. Za podgrijavanje.</p>
+      <div class="series-card">
+        <div class="sc-label">Teška opterećenja</div>
+        <h4>Extra debela FP2 (20 mm)</h4>
+        <p>Debljina 20 mm za garaže, terase s vozilima i javne površine. Nosivost do 1200 kg/m².</p>
+        <div class="format-tags">
+          <span class="format-tag">30×122</span>
+          <span class="format-tag">60×90</span>
+          <span class="format-tag">61×61</span>
+          <span class="format-tag">61×122</span>
+          <span class="format-tag">90×90</span>
+          <span class="format-tag">122×122</span>
+        </div>
       </div>
 
-      <div class="product-card">
-        <div class="category">Parketari / Podloge</div>
-        <h3>Masa za izravnavanje</h3>
-        <p>Samonivelacijske mase CT-C20 i CT-C35 klase. Slojevi 3–80 mm. Brzo sušenje, hod za 4 sata.</p>
+      <div class="series-card">
+        <div class="sc-label">Dekorativno</div>
+        <h4>Mozaici</h4>
+        <p>8 uzoraka — Esagona, Basket, Stripe, Patchwork, Chevron, Diamond, Norge i dr. Format 30×30 i 40×40 cm.</p>
+        <div class="format-tags">
+          <span class="format-tag">30×30</span>
+          <span class="format-tag">30×61</span>
+          <span class="format-tag">40×40</span>
+          <span class="format-tag">36×32,5</span>
+        </div>
       </div>
 
-      <div class="product-card">
-        <div class="category">Estrih majstori</div>
-        <h3>Podni estrih</h3>
-        <p>Cementni i suhi estrih. Tekući (samonivelirajući) i konvencionalni. Armiran vlaknima. 25/30 kg.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="category">Fasaderi</div>
-        <h3>Fasadni sustavi (EPS)</h3>
-        <p>Fasadno ljepilo, armaturna masa, EPS ploče, završna silikatna i silikonska žbuka. Kompletni ETICS sustavi.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="category">Fasaderi / Žbukanje</div>
-        <h3>Završna žbuka</h3>
-        <p>Mineralna, silikatna i silikonska žbuka. Ribana i gruba tekstura. 1.5 mm i 2 mm zrno. Baza za bojanje.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="category">Gipsari / Soboslikari</div>
-        <h3>Glet masa</h3>
-        <p>Fina i gruba glet masa za zidove i stropove. Bijela, laka za brušenje. Pakiranje 5/20/25 kg.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="category">Gipsari / Suha gradnja</div>
-        <h3>Kit za spojeve (knauf)</h3>
-        <p>Kit za suhogradnju, fugirna traka, prajmer za gipskarton. Brzo sušeći i standardni.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="category">Sve kategorije</div>
-        <h3>Temeljni premazi</h3>
-        <p>Kontaktni i penetracijski prajmeri za svaku podlogu — beton, gipskarton, cementna košuljica, drvo.</p>
+      <div class="series-card">
+        <div class="sc-label">Završna obrada</div>
+        <h4>Sokle (Battiscopa)</h4>
+        <p>Sokle za sve formate u odgovarajućim visinama. Usklađene s pločicama iz iste serije.</p>
+        <div class="format-tags">
+          <span class="format-tag">6,5×40</span>
+          <span class="format-tag">6,5×61</span>
+          <span class="format-tag">6,5×121</span>
+          <span class="format-tag">6,5×122</span>
+          <span class="format-tag">7,5×30</span>
+          <span class="format-tag">7,5×61</span>
+        </div>
       </div>
 
     </div>
 
+    <!-- Kolekcije -->
+    <div class="section-label" style="margin-top:48px">Kolekcije</div>
+    <div class="series-grid">
+      <div class="series-card">
+        <h4>La Leccese</h4>
+        <p>Dekorativni uzorak inspiriran klasičnim talijanskim podom. Dostupna u RT i outdoor izvedbi. Formati 30×30 i 30×61 cm.</p>
+      </div>
+      <div class="series-card">
+        <h4>White Marble</h4>
+        <p>Efekt bijelog mramora s naturalnim žilicama. Formati 30×61, 61×61, 61×122 i 122×122 cm.</p>
+      </div>
+      <div class="series-card">
+        <h4>Intreccio</h4>
+        <p>Reljefna tkaninasta tekstura. Dostupna u RT, FP2 i outdoor. Formati 61×61, 90×90 cm.</p>
+      </div>
+      <div class="series-card">
+        <h4>Le Resine</h4>
+        <p>Moderni efekt smole i betona. Jednobojna, dubinski mat. Format 61×122 cm RT.</p>
+      </div>
+      <div class="series-card">
+        <h4>Teak</h4>
+        <p>Imitacija drva teak u gres izvedbi. Format 30×122 cm RT — savršeno za terase.</p>
+      </div>
+      <div class="series-card">
+        <h4>Agadir · Chevron</h4>
+        <p>Agadir 20×20 cm i Chevron 7×40 cm za kreativne uzorke polaganja. Klasika u modernom stilu.</p>
+      </div>
+    </div>
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════════════════════════ LITOKOL ══ -->
+<section class="trades-bg">
+  <div class="container">
+    <span class="brand-badge badge-litokol">Litokol S.p.A. · Italija</span>
+    <h2 class="section-title">Kemija za ugradnju — 376 artikala</h2>
+    <p class="section-sub">Kompletna talijanska kemija za profesionalnu ugradnju pločica, hidroizolaciju i pripremu podloge. Sve kategorije na zalihi.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><div class="num">376</div><div class="lbl">artikala</div></div>
+      <div class="stat-item"><div class="num">9</div><div class="lbl">kategorija</div></div>
+      <div class="stat-item"><div class="num">135</div><div class="lbl">Starlike boja</div></div>
+    </div>
+
+    <div class="litokol-grid" style="margin-top:32px">
+
+      <div class="litokol-card">
+        <span class="lc-count">33 art.</span>
+        <h4>Ljepila za pločice</h4>
+        <p>Cementna ljepila C1, C2, C2 TE, C2 S1, C2 S2. Za podove, zidove, kupaone i terase. Flex izvedbe za podno grijanje i deformabilne podloge.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">C1 / C2</span>
+          <span class="lc-tag">Flex (S1/S2)</span>
+          <span class="lc-tag">Bijela / Siva</span>
+          <span class="lc-tag">25 kg vreće</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">75 art.</span>
+        <h4>Cementne fuge</h4>
+        <p>Fugirne mase za spojeve 1–20 mm. Vodootporne, antibakterijske. Za unutarnju i vanjsku primjenu. Cijeli spektar boja.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">1–6 mm</span>
+          <span class="lc-tag">2–20 mm</span>
+          <span class="lc-tag">Vodonepropusne</span>
+          <span class="lc-tag">Antibakterijske</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">135 art.</span>
+        <h4>Epoxy fuge — Starlike</h4>
+        <p>Starlike EVO i Pro — epoksidne fuge iznimne trajnosti. 200+ boja. Kemijski otporne, vodonepropusne. Za kupaone, kuhinje i javne prostore.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">EVO serija</span>
+          <span class="lc-tag">Pro serija</span>
+          <span class="lc-tag">200+ boja</span>
+          <span class="lc-tag">Kemijski otporne</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">29 art.</span>
+        <h4>Hidroizolacija</h4>
+        <p>Elastične membrane za kupaone, terase i podrume. Jedno i dvokomponentne. Premošćivanje pukotina do 2 mm. Sukladne EN 14891.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">1K / 2K</span>
+          <span class="lc-tag">EN 14891</span>
+          <span class="lc-tag">Terase / Kupaone</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">9 art.</span>
+        <h4>Grundovi i prajmeri</h4>
+        <p>Kontaktni i penetracijski grundovi za svaku podlogu — beton, gipskarton, stara keramika. Povećavaju adheziju ljepila i smanjuju upojnost.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">Penetracijski</span>
+          <span class="lc-tag">Kontaktni</span>
+          <span class="lc-tag">Aktivatori</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">28 art.</span>
+        <h4>Silikoni i kitovi</h4>
+        <p>Sanitarni silikoni za dilatacijske spojeve. Neutralni i acetoksidni. Antifungalna zaštita. Kompletna paleta boja usklađena s Litokol fugama.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">Sanitarni</span>
+          <span class="lc-tag">Neutralni / Acetoksidni</span>
+          <span class="lc-tag">Antifungalni</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">7 art.</span>
+        <h4>Estrihi i nivelacijske mase</h4>
+        <p>Samonivelacijske mase za izravnavanje 3–80 mm. Brzo sušenje — hod za 4 sata, ugradnja pločica za 24h.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">Samorazlivajući</span>
+          <span class="lc-tag">3–80 mm</span>
+          <span class="lc-tag">Podno grijanje</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">17 art.</span>
+        <h4>Čišćenje i zaštita</h4>
+        <p>Uklanjanje cementnog vela, zaštita pločica i fuga. Impregnacija prirodnog kamena i epoxy fuga. Profesionalni čistači za gradilište.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">Cementni vel</span>
+          <span class="lc-tag">Impregnacija</span>
+          <span class="lc-tag">Zaštita fuga</span>
+        </div>
+      </div>
+
+      <div class="litokol-card">
+        <span class="lc-count">43 art.</span>
+        <h4>Alat i pribor</h4>
+        <p>Razmaknice, spatule, aplikacijske pištolje za Pixel 3D, fugirne spužve i sav sitni pribor za profesionalnu ugradnju.</p>
+        <div class="lc-tags">
+          <span class="lc-tag">Razmaknice 1–5 mm</span>
+          <span class="lc-tag">Spatule</span>
+          <span class="lc-tag">Pixel 3D pištolj</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════ HOMEDIN ══ -->
+<section>
+  <div class="container">
+    <span class="brand-badge badge-homedin">Homedin · Italija</span>
+    <h2 class="section-title">Pedestali za podignute terase</h2>
+    <p class="section-sub">Podesivi pedestali za postavljanje FP2 pločica na podignutim terasama, balkonima i ravnim krovovima. Visinska regulacija bez alata. Nosivost do 1000 kg po pedestalu.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><div class="num">11</div><div class="lbl">artikala</div></div>
+      <div class="stat-item"><div class="num">22–392</div><div class="lbl">mm raspon visine</div></div>
+      <div class="stat-item"><div class="num">1000</div><div class="lbl">kg nosivost</div></div>
+    </div>
+
+    <div class="pedestal-grid" style="margin-top:32px">
+
+      <div class="pedestal-card">
+        <span class="pc-range">H 22–52 mm</span>
+        <h4>Homedin HE-1</h4>
+        <p>Najniži pedestal za minimalne visine. Idealan za balkone i male visinske razlike.</p>
+      </div>
+
+      <div class="pedestal-card">
+        <span class="pc-range">H 52–152 mm</span>
+        <h4>Homedin HE-2</h4>
+        <p>Standardni pedestal za terase. Najtraženiji model — pokriti instalacije i pad vode.</p>
+      </div>
+
+      <div class="pedestal-card">
+        <span class="pc-range">H 152–392 mm</span>
+        <h4>Homedin HE-3</h4>
+        <p>Visoki pedestal za ravne krovove i veće visinske razlike. Mogućnost nadgradnje.</p>
+      </div>
+
+      <div class="pedestal-card">
+        <span class="pc-range">H 22–52 mm</span>
+        <h4>Homedin XB-HE-1</h4>
+        <p>Verzija s povećanom X-pločom za nestabilne podloge ili veće formate pločica.</p>
+      </div>
+
+      <div class="pedestal-card">
+        <span class="pc-range">H 52–152 mm</span>
+        <h4>Homedin XB-HE-2</h4>
+        <p>Standardni visinski raspon s povećanom X-pločom. Za veće formate i nestabilne podloge.</p>
+      </div>
+
+      <div class="pedestal-card">
+        <span class="pc-range">H 152–392 mm</span>
+        <h4>Homedin XB-HE-3</h4>
+        <p>Visoki pedestal s X-pločom. Maksimalna stabilnost za krovne terase.</p>
+      </div>
+
+      <div class="pedestal-card">
+        <span class="pc-range">H 12,5 mm</span>
+        <h4>Homedin S-2C</h4>
+        <p>Ultra-niski pedestal za minimalne poravnave. Uglavnom za prijelazne zone.</p>
+      </div>
+
+      <div class="pedestal-card">
+        <span class="pc-range">Pribor</span>
+        <h4>EPDM obloga · Ključ · Kopče</h4>
+        <p>EPDM zaštitna obloga 3 mm, ključ za podešavanje visine i metalne kopče za vertikalne završetke.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════ CTA ══ -->
 <section class="cta-banner">
   <div class="container">
     <h2>Trebate konkretnu ponudu?</h2>
     <p>Javite nam koliko m² i koji materijal — odgovaramo s cijenom isti dan.</p>
+    <a href="cijenik.html" class="btn btn-outline" style="margin-right:12px">Pogledaj cijenik</a>
     <a href="kontakt.html" class="btn">Zatražite ponudu</a>
   </div>
 </section>

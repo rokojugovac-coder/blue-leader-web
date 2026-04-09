@@ -1,0 +1,3542 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cijenik — Blue Leader</title>
+  <meta name="description" content="Cijenik Blue Leader d.o.o. — kompletan asortiman građevinskog materijala.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cat-section { margin-bottom: 56px; }
+    .cat-header {
+      display: flex; align-items: center; gap: 16px;
+      border-bottom: 3px solid var(--navy); padding-bottom: 12px; margin-bottom: 0;
+    }
+    .cat-header h2 { font-size: 22px; font-weight: 800; color: var(--navy); }
+    .cat-count {
+      background: var(--blue); color: white;
+      font-size: 12px; font-weight: 700;
+      padding: 3px 10px; border-radius: 20px;
+    }
+    .cat-table { border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; overflow: hidden; }
+    .ct-head {
+      display: grid; grid-template-columns: 3fr 1fr 2fr 0.7fr 1fr;
+      background: var(--light); padding: 10px 16px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--grey);
+      border-bottom: 1px solid var(--border);
+    }
+    .ct-row {
+      display: grid; grid-template-columns: 3fr 1fr 2fr 0.7fr 1fr;
+      padding: 12px 16px; border-bottom: 1px solid var(--border);
+      font-size: 13px; align-items: center; transition: background 0.15s;
+    }
+    .ct-row:last-child { border-bottom: none; }
+    .ct-row:hover { background: #f8fafc; }
+    .prod-name { font-weight: 600; color: var(--navy); }
+    .prod-color, .prod-pkg, .prod-unit { color: var(--grey); }
+    .prod-pkg { font-size: 12px; }
+    .prod-price { font-size: 12px; }
+    .search-bar { display: flex; gap: 12px; margin-bottom: 40px; }
+    .search-bar input {
+      flex: 1; padding: 12px 16px; border: 1px solid var(--border);
+      border-radius: 8px; font-size: 15px; outline: none;
+    }
+    .search-bar input:focus { border-color: var(--blue); }
+    @media (max-width: 768px) {
+      .ct-head, .ct-row { grid-template-columns: 2fr 1fr 1fr; }
+      .ct-head span:nth-child(2), .ct-row .prod-color,
+      .ct-head span:nth-child(3), .ct-row .prod-pkg { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><span>Blue</span> Leader</a>
+  <ul>
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="usluge.html">Materijali</a></li>
+    <li><a href="cijenik.html" class="active">Cijenik</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <h1>Cijenik</h1>
+  <p>Kompletan asortiman — 465 proizvoda</p>
+</div>
+
+<section>
+  <div class="container">
+
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Pretraži proizvode..." oninput="filterProducts(this.value)">
+    </div>
+
+    <div id="catalog">
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Pločice</h2>
+        <span class="cat-count">78 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 121X121cm polirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">1 kom/kut, 32 kut/pal (46,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 122.2X122.2cm FP2</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">1 kom/kut, 18 kut/pal (26,8 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 122.2X122.2cm polupolirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 18 kut/pal (53,8 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 122.2X122.2cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 18 kut/pal (53,8 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 122.2X122.2cm RT White Marble</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">2 kom/kut, 18 kut/pal (53,8 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 15.1X30.6cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">32 kom/kut, 60 kut/pal (88,8 m²/pal…</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 15X90cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">8 kom/kut, 56 kut/pal (60,5 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 15X90cm RT outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">8 kom/kut, 56 kut/pal (60,5 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 20.2X122.2cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 48 kut/pal (47,5 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 20.2X122.2cm RT outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 48 kut/pal (47,5 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 20X20cm Agadir</span>
+          <span class="prod-color">Bež</span>
+          <span class="prod-pkg">38 kom/kut, 60 kut/pal (91,2 m²/pal…</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 20X20cm Agadir</span>
+          <span class="prod-color">Bež</span>
+          <span class="prod-pkg">38 kom/kut, 60 kut/pal (91,2 m²/pal…</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 20X40cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">14 kom/kut, 72 kut/pal (80,6 m²/pal…</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 22X90cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">5 kom/kut, 66 kut/pal (65,3 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 26X160cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 27 kut/pal (44,8 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.2X60cm polirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">7 kom/kut, 40 kut/pal (50,8 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X122.2cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 36 kut/pal (53,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X122.2cm RT Teak</span>
+          <span class="prod-color">Smeđa</span>
+          <span class="prod-pkg">2 kom/kut, 57 kut/pal (42,2 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X30.4cm RT La Leccese</span>
+          <span class="prod-color">Bjelokost</span>
+          <span class="prod-pkg">13 kom/kut, 40 kut/pal (48 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X30.4cm RT La Leccese outdoor</span>
+          <span class="prod-color">Bjelokost</span>
+          <span class="prod-pkg">13 kom/kut, 40 kut/pal (48 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X61cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">7 kom/kut, 40 kut/pal (52 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X61cm RT La Leccese</span>
+          <span class="prod-color">Bjelokost</span>
+          <span class="prod-pkg">7 kom/kut, 40 kut/pal (52 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X61cm RT La Leccese outdoor</span>
+          <span class="prod-color">Bjelokost</span>
+          <span class="prod-pkg">7 kom/kut, 40 kut/pal (52 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X61cm RT outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">7 kom/kut, 40 kut/pal (52 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.4X61cm RT White Marble</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">7 kom/kut, 40 kut/pal (52 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30.8X61.5cm outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">7 kom/kut, 40 kut/pal (52,8 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 30X122cm FP2</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (26,3 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 60X121cm polirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (52,2 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 60X60cm polirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (43,2 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 60X90cm FP2</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">1 kom/kut, 45 kut/pal (24,3 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61.5X61.5cm outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (45,3 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X122.2cm polupolirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (53,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X122.2cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (53,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X122.2cm RT Le Resine</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (53,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X122.2cm RT Millerighe</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (53,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X122.2cm RT outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (53,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X122.2cm RT White Marble</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">2 kom/kut, 36 kut/pal (53,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X122cm FP2</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">1 kom/kut, 36 kut/pal (26,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm FP2</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 30 kut/pal (22,2 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm FP2 Fruhling</span>
+          <span class="prod-color">Mix</span>
+          <span class="prod-pkg">2 kom/kut, 30 kut/pal (22,2 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm polupolirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (44,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (44,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm RT Intreccio</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (44,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm RT La Leccese</span>
+          <span class="prod-color">Bjelokost</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (44,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm RT La Leccese outdoor</span>
+          <span class="prod-color">Bjelokost</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (44,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm RT outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (44,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 61X61cm RT White Marble</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">4 kom/kut, 30 kut/pal (44,7 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 7.2X40cm Chevron</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">14 kom/kut, 72 kut/pal (80,6 m²/pal…</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 80X80cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 45 kut/pal (57,6 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 90X90cm FP2</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">1 kom/kut, 21 kut/pal (17 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 90X90cm FP2 Intreccio</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">1 kom/kut, 21 kut/pal (17 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 90X90cm polupolirana</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 21 kut/pal (34 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 90X90cm RT</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 21 kut/pal (34 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 90X90cm RT Intreccio</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 21 kut/pal (34 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania 90X90cm RT outdoor</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">2 kom/kut, 21 kut/pal (34 m²/pal)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 29X42 diamond</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30,2X61 Patchwork</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 36 tessere (5X5)</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 36 tessere lappato (5X5)</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 81 tessere (3X3)</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 81 tessere mix naturale e lappate</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 Asimmetrico 18 pz</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 Basket</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 Esagona</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 Esagona lappato</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 Listello Patchwork</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 30X30 Stripe 18 tessere</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 36x32,5 Norge</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 40X40 cube</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania mozaik 40X40 diamond</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 6,5X121cm lappato</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">10 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 6,5X122,2cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">10 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 6,5X122,2cm LCR</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">10 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 6,5X160cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">6 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 6,5X40cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 6,5X61cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">12 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 7,5X30,6cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">36 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Tuscania sokla 7,5X61cm</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">12 kom/kut</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Ljepila za pločice</h2>
+        <span class="cat-count">33 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ActiveGel®</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ActiveGel®</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ActiveGel® S1</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ActiveGel® S1</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ActiveGel® S2</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ActiveGel® S2</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">BoostGel</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">BoostGel</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fastflex K91</span>
+          <span class="prod-color">White</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fastflex K91</span>
+          <span class="prod-color">Grey</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Hyperflex K100</span>
+          <span class="prod-color">White</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Hyperflex K100</span>
+          <span class="prod-color">Grey</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litofast K90</span>
+          <span class="prod-color">White</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litofast K90</span>
+          <span class="prod-color">Grey</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel®</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel®</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel® S1+</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel® S1+</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel® S2+</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel® S2+</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">UltraGel®</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">UltraGel®</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">UltraGel®</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">25 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">UltraGel®</span>
+          <span class="prod-color">Grey</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">UltraGel®</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">UltraGel® Pro</span>
+          <span class="prod-color">White</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">UltraGel® Pro</span>
+          <span class="prod-color">White</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Fix®</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Fix®</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Gel®</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Gel®</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Gel® S1</span>
+          <span class="prod-color">Siva</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Gel® S1</span>
+          <span class="prod-color">Bijela</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Fuge</h2>
+        <span class="cat-count">75 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">225 Tabacco</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">210 Greige</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">230 Cacao</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">100 Bianco Assoluto</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">110 Grigio Perla</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">125 Grigio Cemento</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">140 Nero Grafite</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Fillgood Evo</span>
+          <span class="prod-color">205 Travertino</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Silver 2</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Beige 1</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Beige 2</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Beige 3</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Beige 4</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Brown 1</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Brown 2</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Brown 3</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">White 2</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">White 1</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Silver 3</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Black 1</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Black 2</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Grey 1</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Grey 2</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Grey 3</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Ivory 1</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Ivory 2</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Ivory 3</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">StyleGrout Tech</span>
+          <span class="prod-color">Silver 1</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 02 Sabbia Bianca</span>
+          <span class="prod-color">02 Sabbia Bianca</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 02 Sabbia Bianca</span>
+          <span class="prod-color">02 Sabbia Bianca</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 04 Pomice di Lipari</span>
+          <span class="prod-color">04 Pomice di Lipari</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 04 Pomice di Lipari</span>
+          <span class="prod-color">04 Pomice di Lipari</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 06 Nebbia</span>
+          <span class="prod-color">06 Nebbia</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 07 Cenere</span>
+          <span class="prod-color">07 Cenere</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 07 Cenere</span>
+          <span class="prod-color">07 Cenere</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 08 Terra di Bruma</span>
+          <span class="prod-color">08 Terra di Bruma</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 10 Ardesia</span>
+          <span class="prod-color">10 Ardesia</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 12 Nero Antico</span>
+          <span class="prod-color">12 Nero Antico</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 13 Argilla Bianca</span>
+          <span class="prod-color">13 Argilla Bianca</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 20 Limo del Nilo</span>
+          <span class="prod-color">20 Limo del Nilo</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 21 Calce di Marrakech</span>
+          <span class="prod-color">21 Calce di Marrakech</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 22 Terra di Volterra</span>
+          <span class="prod-color">22 Terra di Volterra</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 24 Argilla Bruciata</span>
+          <span class="prod-color">24 Argilla Bruciata</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 26 White di Spagna</span>
+          <span class="prod-color">26 White di Spagna</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 26 White di Spagna</span>
+          <span class="prod-color">26 White di Spagna</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 27 Caolino</span>
+          <span class="prod-color">27 Caolino</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 28 Dune</span>
+          <span class="prod-color">28 Dune</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 29 Terra di Borgogna</span>
+          <span class="prod-color">29 Terra di Borgogna</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 30 Argilla di Cipro</span>
+          <span class="prod-color">30 Argilla di Cipro</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 31 Terra Fumicata</span>
+          <span class="prod-color">31 Terra Fumicata</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 34 Terracotta</span>
+          <span class="prod-color">34 Terracotta</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 06 — 35 Arenaria</span>
+          <span class="prod-color">35 Arenaria</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 02 Sabbia Bianca</span>
+          <span class="prod-color">02 Sabbia Bianca</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 04 Pomice di Lipari</span>
+          <span class="prod-color">04 Pomice di Lipari</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 04 Pomice di Lipari</span>
+          <span class="prod-color">04 Pomice di Lipari</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 06 Nebbia</span>
+          <span class="prod-color">06 Nebbia</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 06 Nebbia</span>
+          <span class="prod-color">06 Nebbia</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 07 Cenere</span>
+          <span class="prod-color">07 Cenere</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 08 Terra di Bruma</span>
+          <span class="prod-color">08 Terra di Bruma</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 08 Terra di Bruma</span>
+          <span class="prod-color">08 Terra di Bruma</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 10 Ardesia</span>
+          <span class="prod-color">10 Ardesia</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 12 Nero Antico</span>
+          <span class="prod-color">12 Nero Antico</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 13 Argilla Bianca</span>
+          <span class="prod-color">13 Argilla Bianca</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 20 Limo del Nilo</span>
+          <span class="prod-color">20 Limo del Nilo</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 21 Calce di Marrakech</span>
+          <span class="prod-color">21 Calce di Marrakech</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 22 Terra di Volterra</span>
+          <span class="prod-color">22 Terra di Volterra</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 24 Argilla Bruciata</span>
+          <span class="prod-color">24 Argilla Bruciata</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 26 White di Spagna</span>
+          <span class="prod-color">26 White di Spagna</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 27 Caolino</span>
+          <span class="prod-color">27 Caolino</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 28 Dune</span>
+          <span class="prod-color">28 Dune</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 29 Terra di Borgogna</span>
+          <span class="prod-color">29 Terra di Borgogna</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 30 Argilla di Cipro</span>
+          <span class="prod-color">30 Argilla di Cipro</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 31 Terra Fumicata</span>
+          <span class="prod-color">31 Terra Fumicata</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 34 Terracotta</span>
+          <span class="prod-color">34 Terracotta</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color® 2 12 — 35 Arenaria</span>
+          <span class="prod-color">35 Arenaria</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Epoxy fuge i ljepila</h2>
+        <span class="cat-count">135 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">“The Colours of the Earth“ palette page 47</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">“The Colours of the Earth“ palette page 47</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">“The Colours of the Earth” palette page 47 — 00 Crystal</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">“The Colours of the Earth” palette page 47 — 00 Crystal</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">“The Colours of the Earth” palette page 47 — 00 Crystal</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 320 Azzurro Caraibi</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 330 Blu Avio</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 340 Blu Denim</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 350 Blu Zaffiro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 400 Verde Salvia</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 410 Verde Smeraldo</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 420 Verde Prato</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 430 Verde Pino</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 500 Rosa Cipria</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 530 Viola Ametista</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 550 Rosso Oriente</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 580 Rosso Mattone</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Colour palette page 52 — 600 Giallo Vaniglia</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">EpoxyGel Booster</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">EpoxyGel Booster</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">50 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 02 Sabbia Bianca</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 04 Pomice di Lipari</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 06 Nebbia</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 07 Cenere</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 08 Terra di Bruma</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 10 Ardesia</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 12 Nero Antico</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 13 Argilla Bianca</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 20 Limo del Nilo</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 21 Calce di Marrakech</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 22 Terra di Volterra</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 24 Argilla Bruciata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 26 White di Spagna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 27 Caolino</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 28 Dune</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 29 Terra di Borgogna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 30 Argilla di Cipro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 31 Terra Fumicata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 34 Terracotta</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pixel 3D — 35 Arenaria</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel® Pro Max</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">PowerGel® Pro Max</span>
+          <span class="prod-color">Ultra bijela</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 02 Sabbia Bianca</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 04 Pomice di Lipari</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 06 Nebbia</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 07 Cenere</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 08 Terra di Bruma</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 10 Ardesia</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 12 Nero Antico</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 13 Argilla Bianca</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 20 Limo del Nilo</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 21 Calce di Marrakech</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 22 Terra di Volterra</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 24 Argilla Bruciata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 26 White di Spagna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 27 Caolino</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 28 Dune</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 29 Terra di Borgogna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 30 Argilla di Cipro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 31 Terra Fumicata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 34 Terracotta</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Easy RG R2 T — 35 Arenaria</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Finishes</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 22 Terra di Volterra</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 22 Terra di Volterra</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 24 Argilla Bruciata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 24 Argilla Bruciata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 26 White di Spagna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 26 White di Spagna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 27 Caolino</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 27 Caolino</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 28 Dune</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 28 Dune</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 29 Terra di Borgogna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 29 Terra di Borgogna</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 30 Argilla di Cipro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 30 Argilla di Cipro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 31 Terra Fumicata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 31 Terra Fumicata</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 34 Terracotta</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 34 Terracotta</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 35 Arenaria</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike Pro RG R2 T — 35 Arenaria</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Crystal — STRPLT0100</span>
+          <span class="prod-color">Crystal</span>
+          <span class="prod-pkg">100 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">130 Grigio Ardesia</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">300 Azzurro Pastello</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">105 Bianco Titanio</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">102 Bianco Ghiaccio</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">100 Bianco Assoluto</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">110 Grigio Perla</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">115 Grigio Seta</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">120 Grigio Piombo</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">125 Grigio Cemento</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">140 Nero Grafite</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">145 Nero Carbonio</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">200 Avorio</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">202 Naturale</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">205 Travertino</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">208 Sabbia</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">210 Greige</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">215 Tortora</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">225 Tabacco</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">230 Cacao</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">310 Azzurro Polvere</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">232 Cuoio</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Evo</span>
+          <span class="prod-color">235 Caffè</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">20 Limo del Nilo</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">21 Calce di Marrakech</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">06 Nebbia</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">06 Nebbia</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">07 Cenere</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">07 Cenere</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">08 Terra di Bruma</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">20 Limo del Nilo</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">21 Calce di Marrakech</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">08 Terra di Bruma</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">10 Ardesia</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">10 Ardesia</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">12 Nero Antico</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">12 Nero Antico</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">04 Pomice di Lipari</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">04 Pomice di Lipari</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">02 Sabbia Bianca</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">02 Sabbia Bianca</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">13 Argilla Bianca</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro</span>
+          <span class="prod-color">13 Argilla Bianca</span>
+          <span class="prod-pkg">2.5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Galaxy</span>
+          <span class="prod-color">Galaxy</span>
+          <span class="prod-pkg">75 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Galaxy</span>
+          <span class="prod-color">Galaxy</span>
+          <span class="prod-pkg">150 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Gold</span>
+          <span class="prod-color">Gold</span>
+          <span class="prod-pkg">150 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Gold</span>
+          <span class="prod-color">Gold</span>
+          <span class="prod-pkg">75 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Night Vision</span>
+          <span class="prod-color">Night Vision</span>
+          <span class="prod-pkg">400 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Night Vision</span>
+          <span class="prod-color">Night Vision</span>
+          <span class="prod-pkg">200 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Spotlight</span>
+          <span class="prod-color">Spotlight</span>
+          <span class="prod-pkg">150 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Pro — Spotlight</span>
+          <span class="prod-color">Spotlight</span>
+          <span class="prod-pkg">75 g</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Color 2 12 CG2 WA — 20 Limo del Nilo</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Grundovi</h2>
+        <span class="cat-count">9 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Boost Pro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Boost Pro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Activator®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Activator®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Activator® Grip</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Activator® Grip</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Prime®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Prime®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Prime®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Hidroizolacija</h2>
+        <span class="cat-count">29 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Coverflex</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg vreća</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Coverflex</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">10 kg kanta</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Elastocem</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">24 kg vreća</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Elastocem</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">8 kg kanta</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroBand Anti-Fracture</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">120 mm x 50 m (50 m)</span>
+          <span class="prod-unit">m</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroBand Gel</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">3 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroBand Joint Anti-Fracture</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">140 mm x 30 m (30 m)</span>
+          <span class="prod-unit">m</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroBand SA Anti-Fracture</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">105 mm x 20 m (20 m)</span>
+          <span class="prod-unit">m</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroCollar 35</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroCollar 65</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroCollar 8</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroCorner External</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroCorner Internal</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroCorner SA External</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroCorner SA Internal</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroDrain SA</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroMesh Anti-Fracture</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 m x 50 m (50 m2)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroPad®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">15 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroProof Anti-Fracture</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 m x 30 m (30 m2)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroStop</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">10 m</span>
+          <span class="prod-unit">m</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litoside</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 m</span>
+          <span class="prod-unit">m</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litotex</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">50 m</span>
+          <span class="prod-unit">m</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litotex Extreme</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 m x 15 m (15 m2)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">SafetyGel®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">SafetyGel®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">5 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">SafetyGel®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">10 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">SFT XAF - Anti-Fracture Mesh</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 m x 50 m (50 m2)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">SFT XAF - Anti-Fracture Tape</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">0.2 m x 50 m (50 m)</span>
+          <span class="prod-unit">m</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Protector Smart Barrier</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Silikoni i kitovi</h2>
+        <span class="cat-count">28 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroPixel®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">290 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Silver 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">White 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">White 2</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Silver 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Silver 2</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Black 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Black 2</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Grey 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Grey 2</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Grey 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Ivory 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Ivory 2</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Ivory 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Beige 2</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Beige 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Beige 4</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Brown 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Brown 2</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Brown 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Color</span>
+          <span class="prod-color">Beige 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Neutro</span>
+          <span class="prod-color">Black 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Neutro</span>
+          <span class="prod-color">Silver 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Neutro</span>
+          <span class="prod-color">Ivory 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Neutro</span>
+          <span class="prod-color">Beige 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Neutro</span>
+          <span class="prod-color">00 Crystal</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Neutro</span>
+          <span class="prod-color">White 1</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litosil Neutro</span>
+          <span class="prod-color">Silver 3</span>
+          <span class="prod-pkg">300 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Estrihi i nivelacijske mase</h2>
+        <span class="cat-count">7 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">CrackRepair</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">HydroLevel® 1-30</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Floor®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Floor® Pro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">25 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Level® 0-10</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Plan® 1-20</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Plan® 3-40</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">20 kg</span>
+          <span class="prod-unit">kg</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Čišćenje i zaštita</h2>
+        <span class="cat-count">17 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Care</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">5 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Care</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Care Pro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">500 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Remover</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">750 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Starlike® Wall Care</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">750 ml</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Cleaner</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">l</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Cleaner</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">l</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Cleaner Forte</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">l</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Cleaner Forte</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">l</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Cleaner Pro</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Cleaner Scrub</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">l</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Cleaner Shine</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">l</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Grip</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Protector Gres + Stone</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Tone Matt</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Tone Satin</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X-Wax Gres + Stone</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 L</span>
+          <span class="prod-unit">L</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Pedestali</h2>
+        <span class="cat-count">11 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin EPDM obloga 3mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin HE-1 H22-52mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin HE-2 H52-152mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin HE-3 H152-392mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin Kljuc za podesavanje visine</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin Metalne kopce za vertikalne zavrsetke</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin S-2C H12.5mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin XB-HE-1 H22-52mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin XB-HE-2 H52-152mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin XB-HE-3 H152-392mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Homedin Zidni odstojnik</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cat-section">
+      <div class="cat-header">
+        <h2>Alat i pribor</h2>
+        <span class="cat-count">43 proizvoda</span>
+      </div>
+      <div class="cat-table">
+        <div class="ct-head">
+          <span>Naziv</span>
+          <span>Boja</span>
+          <span>Pakiranje</span>
+          <span>Jed.</span>
+          <span>Cijena</span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">C05 Pro - 0 to 5 mm wedge spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Feltro e Spugna Pro Starlike® — Felt</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Feltro e Spugna Pro Starlike® — Sponge</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">LEV10 C - Single-use element 1 mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">250 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">LEV15 C - Single-use element 1.5 mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">250 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">LEV20 C - Single-use element 2 mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">250 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">LEV30 C - Single-use element 3 mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">250 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">LEV5 C - Single-use element 0.5 mm</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">250 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Level 10 G - Single-use screw 1 mm cylinder system</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">100 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Level 15 G - Single-use screw 1.5 mm cylinder system</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">100 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Level 20 G - Single-use screw 2 mm cylinder system</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">100 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Level 30 G - Single-use screw 3 mm cylinder system</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">100 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Litomesh</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 m x 50 m (50 m2)</span>
+          <span class="prod-unit">m2</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Power Gun — 00 Crystal</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Power Gun — 02 Sabbia Bianca</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Power Gun — 08 Terra di Bruma</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Power Gun — 10 Ardesia</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Power Gun — 12 Nero Antico</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Power Gun — 21 Calce di Marrakech</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">—</span>
+          <span class="prod-unit">pc</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 10mm Square teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 12mm Square teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 20 x 10mm Round teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 2mm V</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 3.5mm Square teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 4mm Square teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 6mm Square teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - 8mm Square teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Pro spatula with SoftGrip handle - Tiger Trowel Irregular teeth</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ProLevel Gun - Pliers for the ProLevel Push levelling system</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">1 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ProLevel Push - Levelling wedge</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">100 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">ProLevel Spin - Screw cylinder</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">50 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">Spatola Pro Starlike®</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">T1 Pro - 1mm T-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">T1.5 Pro - 1.5mm T-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">T2 Pro - 2mm T-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">T3 Pro - 3mm T-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">T5 Pro - 5mm T-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X1 Pro - 1mm cross-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X1.5 Pro - 1.5mm cross-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X2 Pro - 2mm cross-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X2.5 Pro - 2.5mm cross-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X3 Pro - 3mm cross-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+        <div class="ct-row">
+          <span class="prod-name">X5 Pro - 5mm cross-shaped spacer for tiles</span>
+          <span class="prod-color">—</span>
+          <span class="prod-pkg">200 kom</span>
+          <span class="prod-unit">kom</span>
+          <span class="prod-price"><span style="color:#6b7280;font-size:12px">Na upit</span></span>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Trebate ponudu za projekt?</h2>
+    <p>Javite nam koliko m² i koji materijal — šaljemo ponudu isti dan.</p>
+    <a href="kontakt.html" class="btn">Zatražite ponudu</a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Blue Leader d.o.o.</strong> — Veleprodaja građevinskog materijala &nbsp;|&nbsp; <a href="mailto:info@blue-leader.hr" style="color:rgba(255,255,255,0.6)">info@blue-leader.hr</a></p>
+  <p style="margin-top:8px">© 2025 Blue Leader d.o.o. Sva prava pridržana.</p>
+</footer>
+
+<script>
+function filterProducts(query) {
+  const q = query.toLowerCase();
+  document.querySelectorAll('.ct-row').forEach(row => {
+    const name = row.querySelector('.prod-name').textContent.toLowerCase();
+    row.style.display = (!q || name.includes(q)) ? '' : 'none';
+  });
+  document.querySelectorAll('.cat-section').forEach(sec => {
+    const visible = [...sec.querySelectorAll('.ct-row')].some(r => r.style.display !== 'none');
+    sec.style.display = visible ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>
